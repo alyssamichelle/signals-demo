@@ -5,7 +5,7 @@
       <p>Let's say you have an app like this one.</p>
       <p>We want to set up any data we might like to track with a signal. A signal is a value which is "reactive", meaning it can notify interested consumers when it changes.</p>
       <p class="code">(() => T)</p>
-      <p>Signal are zero-argument functions. When executed, they return the current value of the signal.</p>
+      <p>Signals are zero-argument functions. When executed, they return the current value of the signal.</p>
       <p>In this particular app, we might want to track the users, listed here at the top.</p>
       <p class="code">users = signal(159845);</p>
     </div>
@@ -13,11 +13,11 @@
     
   <mat-step label="Step 2: Settable Signals">
     <div class="step2">
-      <p>Let's say you want to update our users, we know that as of our last update, we now have 160000. We can set that amount.</p>
+      <p>Let's say we want to update our users; as of our last update, we now have 160000. We can set that amount.</p>
       <p class="code">users = signal(159845);<br>
       <br>
       users.set(160000);</p>
-      <p>We can also update the users as new users come on to the platform.</p>
+      <p>We can also update the users as new users come onto the platform.</p>
       <p class="code">users.update(user => user + 1);</p>
       <p>We do this via <code>SettableSignal</code>. In addition to being a getter function, we can also change the value of the signal, and notify any dependents of the change. The API includes <code>.set</code> for replacement, <code>.update</code> for deriving a new value, and <code>.mutate</code> for performing internal mutation of the value.</p>
     </div>
